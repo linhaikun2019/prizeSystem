@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.bg {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: url('../images/bg.jpg') round;
+}
+
+.main {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    background: url('../images/border.png') no-repeat center;
+    background-size: 2000px;
+}
+
+.cap {
+    position: absolute;
+    top: 3vh;
+    left: 40vw;
+    width: 20vw;
+    height: 20vh;
+    background: url('../images/art.png') no-repeat;
+    background-size: 250px;
+    background-position: center;
+    z-index: 999;
+    animation: pulse infinite;
+    animation-duration: 2s;
+
+}
+
+.flowers {
+    position: absolute;
+    top: -12%;
+    left: 55%;
+    width: 30vw;
+    height: 40vh;
+    background: url('../images/flowers.png') no-repeat;
+    background-size: 350px;
+    background-position: center;
+    z-index: 999;
+    animation: zoomIn infinite;
+    animation-duration: 5s;
+}
+
+.lamp {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 12vw;
+    height: 25vh;
+    background: url('../images/lamp.png') no-repeat;
+    background-size: 250px;
+    background-position: center;
+    z-index: 999;
+    animation: shakeX infinite;
+    animation-duration: 5s;
+}
+
+.cloud1 {
+    position: absolute;
+    top: 63%;
+    left: 38%;
+    width: 12vw;
+    height: 30vh;
+    background: url('../images/cloud_l.png') no-repeat;
+    background-size: 250px;
+    background-position: center;
+    z-index: 999;
+    animation: fadeOutLeft infinite;
+    animation-duration: 8s;
+}
+
+.cloud2 {
+    position: absolute;
+    top: 63%;
+    right: 38%;
+    width: 12vw;
+    height: 30vh;
+    background: url('../images/cloud_r.png') no-repeat;
+    background-size: 250px;
+    background-position: center;
+    z-index: 999;
+    animation: fadeOutRight infinite;
+    animation-duration: 8s;
+}
+
+#music {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    width: 3vw;
+    height: 5vh;
+    background: url('../images/m_off.png') no-repeat;
+    background-size: 40px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.start,
+.item5,
+.item6,
+.item7,
+.item8 {
+    width: 30%;
+    height: 30%;
+    background: #ffcc99;
+    box-shadow: 0px 0px 10px 5px #ff9966 inset;
+
+
+}
+
+.item1 {
+    position: relative;
+    border-right: 0;
+    border-bottom: 0;
+    border-radius: 10px 0 0 0;
+    background: url("../images/iphone12.png") #ffcc99 no-repeat;
+    background-size: 35%;
+    background-origin: border-box;
+    background-position: center top 30%;
+}
+
+.item1::after {
+    content: "iPhone\20 12\A\20\20\20\20(64G)";
+    white-space: pre;
+    position: relative;
+    top: 65%;
+    left: 28%;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 5px;
+    color: #cc3333;
+}
+
+.item2 {
+    position: relative;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    background: url("../images/package.png") #ffcc99 no-repeat;
+    background-size: 50%;
+    background-origin: border-box;
+    background-position: center top 20px;
+}
+
+.item2::after {
+    content: "新年大礼包";
+    position: relative;
+    top: 68%;
+    left: 28%;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 5px;
+    color: #cc3333;
+}
+
+.item3 {
+    position: relative;
+    border-left: 0;
+    border-bottom: 0;
+    border-radius: 0 10px 0 0;
+    background: url("../images/ipadair.png") #ffcc99 no-repeat;
+    background-size: 40%;
+    background-origin: border-box;
+    background-position: center top 20px;
+}
+
+.item3::after {
+    content: "iPad Air\A\20\20(64G)";
+    white-space: pre;
+    position: relative;
+    top: 65%;
+    left: 33%;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 20px;
+    color: #cc3333;
+}
+
+.item4 {
+    position: relative;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    background: url("../images/mate40pro.png") #ffcc99 no-repeat;
+    background-size: 50%;
+    background-origin: border-box;
+    background-position: center top 20px;
+}
+
+.item4::after {
+    content: "HUAWEI\20Mate\20 40\A\20\20\20\20\20(8G+128G)";
+    white-space: pre;
+    position: relative;
+    top: 65%;
+    left: 12%;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 20px;
+    color: #cc3333;
+}
+
+.start {
+    z-index: 999;
+    transition: all 0.2s;
+}
+
+.btn {
+    position: relative;
+    background: url('../images/btn_bg.jpg') no-repeat;
+    background-size: 500px;
+    background-position: center;
+    box-shadow: 0px 0px 20px 10px #cc3333;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.btn::after {
+    content: "开始抽奖";
+    font-size: 2.4em;
+    font-weight: 200;
+    color: #ffff66;
+    text-shadow: 1px 1px 5px #ffffff;
+    position: absolute;
+    z-index: 999;
+    width: 100px;
+    margin-left: 25%;
+    margin-top: 14%;
+    transition: all 0.2s;
+}
+
+.item5 {
+    position: relative;
+    border-top: 0;
+    border-left: 0;
+    border-bottom: 0;
+    background: url("../images/mi11.png") #ffcc99 no-repeat;
+    background-size: 38%;
+    background-origin: border-box;
+    background-position: center top 20px;
+}
+
+.item5::after {
+    content: "\20\20\20小米\20 11\A(8G+256G)";
+    white-space: pre;
+    position: relative;
+    top: 65%;
+    left: 28%;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 20px;
+    color: #cc3333;
+}
+
+.item6 {
+    position: relative;
+    border-top: 0;
+    border-right: 0;
+    border-radius: 0 0 0 10px;
+    background: url("../images/macbookair.png") #ffcc99 no-repeat;
+    background-size: 50%;
+    background-origin: border-box;
+    background-position: center top 20px;
+}
+
+.item6::after {
+    content: "MacBook Air\A\20(8G+256G)";
+    white-space: pre;
+    position: relative;
+    top: 58%;
+    left: 22%;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 20px;
+    color: #cc3333;
+}
+
+.item7 {
+    position: relative;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background: url("../images/star.png") #ffcc99 no-repeat;
+    background-size: 50%;
+    background-origin: border-box;
+    background-position: center top 20px;
+}
+
+.item7::after {
+    content: "谢谢参与";
+    position: relative;
+    top: 68%;
+    left: 32%;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 20px;
+    color: #cc3333;
+}
+
+.item8 {
+    position: relative;
+    border-top: 0;
+    border-left: 0;
+    border-radius: 0 0 10px 0;
+    background: url("../images/pocket.png") #ffcc99 no-repeat;
+    background-size: 42%;
+    background-origin: border-box;
+    background-position: center top 20px;
+}
+
+.item8::after {
+    content: "新年红包";
+    position: relative;
+    top: 68%;
+    left: 32%;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 20px;
+    color: #cc3333;
+}
+
+
+@media screen and (min-width:760px) and (max-width:1100px) {
+    .cap {
+        width: 30vw;
+        height: 20vh;
+        left: 35vw;
+    }
+
+    .flowers {
+        left: 60%;
+        width: 30vw;
+        height: 40vh;
+    }
+
+    .lamp {
+        width: 20vw;
+        height: 25vh;
+        background-size: 250px;
+    }
+
+    .cloud1 {
+        top: 68%;
+        left: 30%;
+        width: 30vw;
+        height: 30vh;
+        background-size: 180px;
+    }
+
+    .cloud2 {
+        top: 68%;
+        right: 30%;
+        width: 30vw;
+        height: 30vh;
+        background-size: 180px;
+    }
+
+    #music {
+        width: 8vw;
+    }
+
+}
+
+@media screen and (max-width:760px) {
+    .bg {
+        background: url('../images/bg_m.jpg') round;
+    }
+    .cap {
+        width: 45vw;
+        height: 20vh;
+        left: 28vw;
+        background-size: 200px;
+    }
+
+    .flowers {
+        left: 65%;
+        width: 35vw;
+        height: 40vh;
+        background-size: 180px;
+    }
+
+    .lamp {
+        top: -3%;
+        width: 22vw;
+        height: 25vh;
+        background-size: 180px;
+    }
+
+    .cloud1 {
+        top: 68%;
+        left: 30%;
+        width: 30vw;
+        height: 30vh;
+        background-size: 180px;
+    }
+
+    .cloud2 {
+        top: 68%;
+        right: 30%;
+        width: 30vw;
+        height: 30vh;
+        background-size: 180px;
+    }
+
+    #music {
+        width: 8vw;
+    }
+}
+
+@media screen and (max-height:850px) {
+    .cap {
+        top:1%;
+        height: 15vh;
+    }
+}
